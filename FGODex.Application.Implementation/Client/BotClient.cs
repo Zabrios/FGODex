@@ -16,11 +16,12 @@ namespace FGODex.Application.Implementation.Client
         {
             try
             {
+            // should HTTPCLient change to anything not null?
                 Client = new BlockingTelegramBotClient(config["TelegramBotToken"], (HttpClient)null);
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                throw e;
+                throw ex;
             }
         }
     }
